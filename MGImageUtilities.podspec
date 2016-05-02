@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://mattgemmell.com/2010/07/05/mgimageutilities/"
   s.license      = { :type => 'BSD', :file => 'Source Code License.rtf' }
   s.authors      = { "Matt Gemmell" => "matt@mattgemmell.com",
-                     "Alexsander Akers" => "a2@pnd.mn" }
+                     "Mickey Sha" => "yanbo.sha@gmail.com" }
   s.source       = { :git => "https://github.com/MickeyHub/MGImageUtilities.git", :tag => s.version }
   s.platform     = :ios, '4.0'
   s.source_files = 'Classes/UIImage*.{h,m}'
