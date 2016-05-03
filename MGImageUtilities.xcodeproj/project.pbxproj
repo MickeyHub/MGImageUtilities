@@ -16,6 +16,7 @@
 		C901794411E13174002B9BA3 /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = C901794011E13174002B9BA3 /* UIImage+ProportionalFill.m */; };
 		C901794511E13174002B9BA3 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = C901794211E13174002B9BA3 /* UIImage+Tint.m */; };
 		C901797A11E1398F002B9BA3 /* original.png in Resources */ = {isa = PBXBuildFile; fileRef = C901797911E1398F002B9BA3 /* original.png */; };
+		D4AB46E01CD83FCD00033302 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4AB46DF1CD83FCD00033302 /* License.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +34,10 @@
 		C901794011E13174002B9BA3 /* UIImage+ProportionalFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ProportionalFill.m"; sourceTree = "<group>"; };
 		C901794111E13174002B9BA3 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		C901794211E13174002B9BA3 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
-		C901795511E1354F002B9BA3 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
 		C901797911E1398F002B9BA3 /* original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = original.png; sourceTree = "<group>"; };
 		C901798311E13A4C002B9BA3 /* original.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = original.psd; sourceTree = "<group>"; };
 		C9D4929311E1D29A00B63B06 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		D4AB46DF1CD83FCD00033302 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +74,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D4AB46DF1CD83FCD00033302 /* License.txt */,
 				C9D4929311E1D29A00B63B06 /* README.markdown */,
-				C901795511E1354F002B9BA3 /* Source Code License.rtf */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -160,7 +161,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MGImageUtilities" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -185,6 +186,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				C901797A11E1398F002B9BA3 /* original.png in Resources */,
+				D4AB46E01CD83FCD00033302 /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +216,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MGImageUtilities_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MGImageUtilities-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.instinctivecode.test.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MGImageUtilities;
 			};
 			name = Debug;
@@ -227,8 +230,9 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MGImageUtilities_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MGImageUtilities-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.instinctivecode.test.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MGImageUtilities;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -237,11 +241,12 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -249,7 +254,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

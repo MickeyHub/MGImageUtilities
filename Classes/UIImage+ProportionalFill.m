@@ -11,7 +11,7 @@
 @implementation UIImage (MGProportionalFill)
 
 
-- (UIImage *)imageToFitSize:(CGSize)fitSize method:(MGImageResizingMethod)resizeMethod
+- (UIImage *)mg_imageToFitSize:(CGSize)fitSize method:(MGImageResizingMethod)resizeMethod
 {
 	float imageScaleFactor = 1.0;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_4_0
@@ -128,15 +128,15 @@
 }
 
 
-- (UIImage *)imageCroppedToFitSize:(CGSize)fitSize
+- (UIImage *)mg_imageCroppedToFitSize:(CGSize)fitSize
 {
-	return [self imageToFitSize:fitSize method:MGImageResizeCrop];
+	return [self mg_imageToFitSize:fitSize method:MGImageResizeCrop];
 }
 
 
-- (UIImage *)imageScaledToFitSize:(CGSize)fitSize
+- (UIImage *)mg_imageScaledToFitSize:(CGSize)fitSize
 {
-	return [self imageToFitSize:fitSize method:MGImageResizeScale];
+	return [self mg_imageToFitSize:fitSize method:MGImageResizeScale];
 }
 
 
