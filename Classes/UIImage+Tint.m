@@ -14,7 +14,7 @@
 - (UIImage *)mg_imageTintedWithColor:(UIColor *)color
 {
 	// This method is designed for use with template images, i.e. solid-coloured mask-like images.
-	return [self imageTintedWithColor:color fraction:0.0]; // default to a fully tinted mask of the image.
+	return [self mg_imageTintedWithColor:color fraction:0.0]; // default to a fully tinted mask of the image.
 }
 
 
